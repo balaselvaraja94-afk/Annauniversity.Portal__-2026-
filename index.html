@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anna University - Pre Examination Monitoring System</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#e5e5e5;
+margin:0;
+}
+
+.header{
+background:white;
+padding:15px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+border-bottom:2px solid #ccc;
+}
+
+.banner{
+background:#3bb1b1;
+color:white;
+text-align:center;
+padding:20px;
+font-size:20px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+}
+
+.box{
+background:#f4f4f4;
+padding:20px;
+width:260px;
+border-radius:5px;
+box-shadow:0 0 5px #aaa;
+}
+
+.box h3{
+text-align:center;
+}
+
+input{
+width:100%;
+padding:8px;
+margin-top:8px;
+margin-bottom:10px;
+}
+
+.captcha{
+background:black;
+color:lime;
+text-align:center;
+font-size:26px;
+padding:10px;
+letter-spacing:5px;
+}
+
+button{
+width:100%;
+padding:8px;
+background:#2c9b9b;
+color:white;
+border:none;
+}
+
+.notice{
+background:white;
+padding:15px;
+width:300px;
+border:1px solid #ccc;
+}
+
+.footer{
+margin-top:40px;
+background:#cfeeee;
+text-align:center;
+padding:10px;
+font-size:12px;
+}
+
+.error{
+color:red;
+font-size:14px;
+}
+
+</style>
+
+<script>
+
+function login(){
+
+var roll = document.getElementById("roll").value;
+var dob = document.getElementById("dob").value;
+
+if(roll=="952825205010" && dob=="11-05-2008")
+{
+window.location="dashboard.html";
+}
+else
+{
+document.getElementById("error").innerHTML="Invalid Register Number or Date of Birth";
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+Anna University, Chennai<br>
+Office of the Controller of Examinations
+</div>
+
+<div class="banner">
+Welcome to Office of the Controller of Examinations<br>
+Pre-Examination Monitoring System
+</div>
+
+<div class="container">
+
+<div class="box">
+<h3>Institution / Staff login</h3>
+
+<label>Institution / Staff Code</label>
+<input type="text">
+
+<label>Password</label>
+<input type="password">
+
+<label>Enter the Captcha</label>
+<input type="text">
+
+<div class="captcha">JBTKPG</div>
+
+<button>Login</button>
+
+</div>
+
+<div class="box">
+<h3>Student login</h3>
+
+<label>Register Number</label>
+<input type="text" id="roll">
+
+<label>Date of Birth</label>
+<input type="text" id="dob" placeholder="DD-MM-YYYY">
+
+<label>Enter the Captcha</label>
+<input type="text">
+
+<div class="captcha">rgMpDR</div>
+
+<button onclick="login()">Login</button>
+
+<p id="error" class="error"></p>
+
+</div>
+
+<div class="notice">
+
+<h3>Attention</h3>
+
+<p>End Semester e-VBAB Network Project (Afghanistan and African Students).</p>
+
+<p>Distance Education (MBA): Web portal opened for registration of December 2025 End Semester Examinations.</p>
+
+<p>Applying for Revaluation of Answer Script (August / September 2025 Exams).</p>
+
+</div>
+
+</div>
+
+<div class="footer">
+Designed and developed by National Informatics Centre, Chennai
+</div>
+
+</body>
+</html>
