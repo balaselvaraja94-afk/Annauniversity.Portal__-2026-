@@ -110,7 +110,24 @@ document.getElementById("error").innerHTML="Invalid Register Number or Date of B
 }
 
 }
+function login(){
 
+var reg = document.getElementById("reg").value;
+var dob = document.getElementById("dob").value;
+
+if(reg=="952825205010" && dob=="11-05-2008"){
+window.location="result.html";
+}
+
+else if(reg=="952825104075" && dob=="05-06-2008"){
+window.location="mariappan.html";
+}
+
+else{
+alert("Invalid Register Number or DOB");
+}
+
+}
 </script>
 
 </head>
