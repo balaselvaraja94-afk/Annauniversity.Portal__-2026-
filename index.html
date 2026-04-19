@@ -96,38 +96,20 @@ font-size:14px;
 <script>
 
 function login(){
+  var reg = document.getElementById("reg").value;
+  var dob = document.getElementById("dob").value;
 
-var roll = document.getElementById("roll").value;
-var dob = document.getElementById("dob").value;
-
-if(roll=="952825205010" && dob=="11-05-2008")
-{
-window.location="dashboard.html";
-}
-else
-{
-document.getElementById("error").innerHTML="Invalid Register Number or Date of Birth";
-}
-
-}
-function login(){
-
-var reg = document.getElementById("reg").value;
-var dob = document.getElementById("dob").value;
-
-if(reg=="952825205010" && dob=="11-05-2008"){
-window.location="result.html";
+  if(reg=="952825205010" && dob=="11-05-2008"){
+    window.location="dashboard.html";
+  }
+  else if(reg=="952825104075" && dob=="05-06-2008"){
+    window.location="mariappan.html";
+  }
+  else{
+    alert("Invalid Register Number or DOB");
+  }
 }
 
-else if(reg=="952825104075" && dob=="05-06-2008"){
-window.location="mariappan.html";
-}
-
-else{
-alert("Invalid Register Number or DOB");
-}
-
-}
 </script>
 
 </head>
@@ -168,7 +150,7 @@ Pre-Examination Monitoring System
 <h3>Student login</h3>
 
 <label>Register Number</label>
-<input type="text" id="roll">
+<input type="text" id="reg">
 
 <label>Date of Birth</label>
 <input type="text" id="dob" placeholder="DD-MM-YYYY">
