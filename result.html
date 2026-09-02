@@ -1,54 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Anna University Result</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Results - Anna University</title>
 
 <style>
 
-body{
-font-family: Arial;
-background:#f2f2f2;
-margin:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header{
-background:#0f8b8d;
-color:white;
-text-align:center;
-padding:15px;
-font-size:22px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4eff5 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.result-box{
-width:700px;
-background:white;
-margin:40px auto;
-padding:20px;
-box-shadow:0 0 10px gray;
+.header {
+  background: linear-gradient(135deg, #17a2a2 0%, #1db8b8 100%);
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(23,162,162,0.3);
+  margin: -20px -20px 30px -20px;
 }
 
-h2{
-text-align:center;
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+.header-content div:first-child,
+.header-content div:last-child {
+  font-size: 24px;
 }
 
-th,td{
-border:1px solid gray;
-padding:8px;
-text-align:center;
+.result-box {
+  max-width: 800px;
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  border-top: 4px solid #17a2a2;
 }
 
-th{
-background:#cfeeee;
+h2 {
+  text-align: center;
+  color: #17a2a2;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-.info{
-margin-bottom:20px;
-font-size:18px;
+.info {
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 15px;
+  background: #f0f8f9;
+  border-radius: 4px;
+  border-left: 4px solid #17a2a2;
+}
+
+.info b {
+  color: #17a2a2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background: #b3e5e1;
+  color: #17a2a2;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #7dd3ce;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  background: white;
+}
+
+td:nth-child(1),
+td:nth-child(2) {
+  font-weight: 500;
+}
+
+table tr:nth-child(even) td {
+  background: #f9fdfdfb;
+}
+
+table tr:hover td {
+  background: #f0f8f9;
+}
+
+.footer {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 15px 0;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #17a2a2 0%, #148f8f 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #148f8f 0%, #117d7d 100%);
+  box-shadow: 0 4px 12px rgba(23,162,162,0.3);
+  transform: translateY(-2px);
 }
 
 </style>
@@ -58,40 +145,54 @@ font-size:18px;
 <body>
 
 <div class="header">
-Anna University Examination Results
+<div class="header-content">
+  <div>📊</div>
+  <div>Examination Results</div>
+  <div>✅</div>
+</div>
 </div>
 
 <div class="result-box">
 
-<h2>Result for Nov / Dec Examination</h2>
+<h2>Result for April / May Examination, 2026</h2>
 
 <div class="info">
-<b>Name:</b> S BALA SELVA RAJA<br>
-<b>Roll No:</b> 952825205010<br>
-<b>Institution:</b> 9528 SCAD Engineering College and Technology<br>
-<b>Branch:</b> B.Tech Information Technology
+<b>Register Number:</b> 952825205009<br>
+<b>Name:</b> BALA SELVA RAJA S<br>
+<b>Institution:</b> 9528 - SCAD College of Engineering and Technology<br>
+<b>Branch:</b> B.Tech. Information Technology
 </div>
 
 <table>
-
 <tr>
-<th>Subject Code</th>
-<th>Grade</th>
+  <th>Semester</th>
+  <th>Subject Code</th>
+  <th>Grade</th>
+  <th>Result</th>
 </tr>
 
-<tr><td>CS25C01</td><td>B+</td></tr>
-<tr><td>CS25C03</td><td>A</td></tr>
-<tr><td>CY25CO1</td><td>B</td></tr>
-<tr><td>EN25C01</td><td>B+</td></tr>
-<tr><td>MA25C01</td><td>B</td></tr>
-<tr><td>ME25C04</td><td>A+</td></tr>
-<tr><td>PH25C01</td><td>C+</td></tr>
-<tr><td>UC25A01</td><td>A+</td></tr>
-<tr><td>UC25A02</td><td>A+</td></tr>
-<tr><td>UC25H01</td><td>A+</td></tr>
-
+<tr><td>02</td><td>FE25C01</td><td>UA</td><td>RA</td></tr>
+<tr><td>02</td><td>EN25C02</td><td>A+</td><td>PASS</td></tr>
+<tr><td>02</td><td>IT25201</td><td>A</td><td>PASS</td></tr>
+<tr><td>02</td><td>IT25202</td><td>UA</td><td>RA</td></tr>
+<tr><td>02</td><td>MA25C02</td><td>U</td><td>RA</td></tr>
+<tr><td>02</td><td>ME25C05</td><td>A+</td><td>PASS</td></tr>
+<tr><td>02</td><td>PH25C03</td><td>C+</td><td>PASS</td></tr>
+<tr><td>02</td><td>UC25A03</td><td>A</td><td>PASS</td></tr>
+<tr><td>02</td><td>UC25A04</td><td>S</td><td>PASS</td></tr>
+<tr><td>02</td><td>UC25F02</td><td>A+</td><td>PASS</td></tr>
+<tr><td>02</td><td>UC25H02</td><td>UA</td><td>RA</td></tr>
+<tr><td>01</td><td>MA25C01</td><td>UA</td><td>RA</td></tr>
+<tr><td>01</td><td>PH25C01</td><td>UA</td><td>RA</td></tr>
+<tr><td>01</td><td>UC25H01</td><td>U</td><td>RA</td></tr>
 </table>
 
+<button onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+
+</div>
+
+<div class="footer">
+Designed and developed by National Informatics Centre, Chennai
 </div>
 
 </body>

@@ -1,56 +1,129 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Profile - Anna University</title>
 
 <style>
 
-body{
-font-family: Arial;
-background:#f2f2f2;
-margin:0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.header{
-background:#0f8b8d;
-color:white;
-text-align:center;
-padding:15px;
-font-size:22px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f4f8 0%, #d4eff5 100%);
+  min-height: 100vh;
+  padding: 20px;
 }
 
-.profile-box{
-width:500px;
-background:white;
-margin:50px auto;
-padding:20px;
-border-radius:5px;
-box-shadow:0 0 10px gray;
+.header {
+  background: linear-gradient(135deg, #17a2a2 0%, #1db8b8 100%);
+  color: white;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(23,162,162,0.3);
+  border-radius: 0;
+  margin: -20px -20px 30px -20px;
 }
 
-.profile-box h2{
-text-align:center;
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-table{
-width:100%;
-font-size:18px;
+.header-content div:first-child {
+  font-size: 24px;
 }
 
-td{
-padding:10px;
+.profile-box {
+  max-width: 600px;
+  background: white;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-top: 4px solid #17a2a2;
 }
 
-.label{
-font-weight:bold;
+.profile-box h2 {
+  text-align: center;
+  color: #17a2a2;
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
-button{
-margin-top:20px;
-padding:10px 20px;
-background:#0f8b8d;
-color:white;
-border:none;
+table {
+  width: 100%;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #e8f4f8;
+}
+
+table tr:last-child {
+  border-bottom: none;
+}
+
+td {
+  padding: 15px 10px;
+  text-align: left;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td:last-child {
+  text-align: left;
+}
+
+.label {
+  font-weight: 600;
+  color: #17a2a2;
+  width: 40%;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #17a2a2 0%, #148f8f 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #148f8f 0%, #117d7d 100%);
+  box-shadow: 0 4px 12px rgba(23,162,162,0.3);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.footer {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 15px 0;
 }
 
 </style>
@@ -60,41 +133,43 @@ border:none;
 <body>
 
 <div class="header">
-Anna University Student Profile
+<div class="header-content">
+  <div>👤</div>
+  <div>Student Profile</div>
+  <div>📄</div>
+</div>
 </div>
 
 <div class="profile-box">
 
-<h2>Student Details</h2>
+<h2>Student Information</h2>
 
 <table>
-
 <tr>
-<td class="label">Name</td>
-<td>S BALA SELVA RAJA</td>
+  <td class="label">Name</td>
+  <td>BALA SELVA RAJA S</td>
 </tr>
-
 <tr>
-<td class="label">Roll No</td>
-<td>95282520510</td>
+  <td class="label">Register Number</td>
+  <td>952825205009</td>
 </tr>
-
 <tr>
-<td class="label">Institution</td>
-<td>9528 SCAD Engineering College and Technology</td>
+  <td class="label">Institution</td>
+  <td>9528 - SCAD College of Engineering and Technology</td>
 </tr>
-
 <tr>
-<td class="label">Branch</td>
-<td>B.Tech Information Technology</td>
+  <td class="label">Branch</td>
+  <td>B.Tech. Information Technology</td>
 </tr>
-
 </table>
 
-<center>
-<button onclick="window.location.href='index.html'">Logout</button>
-</center>
+<button onclick="window.location.href='dashboard.html'">← Back to Dashboard</button>
+<button onclick="window.location.href='index.html'" style="margin-top: 10px; background: linear-gradient(135deg, #e74c3c 0%, #c92a2a 100%);">🚪 Logout</button>
 
+</div>
+
+<div class="footer">
+Designed and developed by National Informatics Centre, Chennai
 </div>
 
 </body>
